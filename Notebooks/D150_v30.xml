@@ -3694,7 +3694,7 @@
                 <name>D150_wing_1Positioning4</name>
                 <length>12.013156909</length>
                 <sweepAngle>27.418</sweepAngle>
-                <dihedralAngle>5.0</dihedralAngle>
+                <dihedralAngle>5</dihedralAngle>
                 <fromSectionUID>D150_wing_1Section3ID</fromSectionUID>
                 <toSectionUID>D150_wing_1Section4ID</toSectionUID>
               </positioning>
