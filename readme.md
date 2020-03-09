@@ -1,4 +1,4 @@
-# Working with CPACS
+# CPACS Seminar
 
 The content of this page is used to introduce in working with CPACS. For this I like jupyter notebooks which you can run on your local PC to better followo and modify the examples.
 
