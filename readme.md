@@ -25,6 +25,9 @@ jupyter-notebook notebookName.ipynb
 ```
 Your browser will automatically open and connect to a local Conda host. 
 
+### Trouble shooting
+With Miniconda I experienced [this bug](https://github.com/jupyter/notebook/issues/4079#issuecomment-429475420) which was solved by giving the correct path to the python.exe.
+
 ### Open source XSD viewer
 - [XSDDiagram](http://regis.cosnier.free.fr/?page=XSDDiagram)
 - [GitHub](https://github.com/dgis/xsddiagram)
