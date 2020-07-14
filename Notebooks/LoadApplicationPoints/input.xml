@@ -971,36 +971,30 @@
         </wings>
         <analyses>
             <global>
-                <loadApplicationPoints>
-                    <pointSet uID="pointSet1">
+                <loadApplicationPointSets>
+                    <loadApplicationPointSet uID="pointSet1">
                         <componentUID>D150_iLOADS_W1</componentUID>
-                        <loadReferenceAxisPoints>
-                            <loadReferenceAxisPoint>
-                                <refPoint>
+                        <loadReferenceLine>
+                            <loadReferencePoint>
                                     <eta>0.0</eta>
                                     <xsi>0.3</xsi>
                                     <referenceUID>D150_iLOADS_W1_CompSeg1</referenceUID>
-                                </refPoint>
-                            </loadReferenceAxisPoint>
-                            <loadReferenceAxisPoint>
-                                <refPoint>
+                            </loadReferencePoint>
+                            <loadReferencePoint>
                                     <eta>0.12</eta>
                                     <xsi>0.3</xsi>
-                                    <referenceUID>D150_iLOADS_W1_CompSeg1</referenceUID>
                                     <relHeight>0.5</relHeight>
-                                </refPoint>
-                            </loadReferenceAxisPoint>
-                            <loadReferenceAxisPoint>
-                                <refPoint>
+                                    <referenceUID>D150_iLOADS_W1_CompSeg1</referenceUID>
+                            </loadReferencePoint>
+                            <loadReferencePoint>
                                     <eta>1.</eta>
                                     <xsi>0.4</xsi>
-                                    <referenceUID>D150_iLOADS_W1_CompSeg1</referenceUID>
                                     <relHeight>0.5</relHeight>
-                                </refPoint>
-                            </loadReferenceAxisPoint>
-                        </loadReferenceAxisPoints>
-                    </pointSet>
-                </loadApplicationPoints>
+                                    <referenceUID>D150_iLOADS_W1_CompSeg1</referenceUID>
+                            </loadReferencePoint>
+                        </loadReferenceLine>
+                    </loadApplicationPointSet>
+                </loadApplicationPointSets>
             </global>
         </analyses>
       </model>
