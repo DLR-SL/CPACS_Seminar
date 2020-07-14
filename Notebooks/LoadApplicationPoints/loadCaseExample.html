@@ -13115,7 +13115,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13152,7 +13152,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tixi3</span> <span class="kn">import</span> <span class="n">tixi3wrapper</span>
@@ -13171,24 +13171,6 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>CPACS data set input.xml opended successfully.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13200,7 +13182,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xsd_file</span> <span class="o">=</span> <span class="s1">&#39;cpacs_schema.xsd&#39;</span>
@@ -13210,24 +13192,6 @@ div#notebook {
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hooray, the data set is valid to cpacs_schema.xsd and we don&#39;t have to scold the input data provider :)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13242,7 +13206,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">tixi_h</span><span class="p">)</span>
@@ -13252,260 +13216,14 @@ div#notebook {
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Help on Tixi3 in module tixi3.tixi3wrapper object:
-
-class Tixi3(builtins.object)
- |  Methods defined here:
- |  
- |  __del__(self)
- |  
- |  __init__(self)
- |      Initialize self.  See help(type(self)) for accurate signature.
- |  
- |  addBooleanElement(self, parentPath, elementName, boolean)
- |  
- |  addBooleanElementNS(self, parentPath, qualifiedName, namespaceURI, boolean)
- |  
- |  addCpacsHeader(self, name, creator, version, description, cpacsVersion)
- |  
- |  addDoubleAttribute(self, elementPath, attributeName, number, format)
- |  
- |  addDoubleElement(self, parentPath, elementName, number, format)
- |  
- |  addDoubleElementNS(self, parentPath, qualifiedName, namespaceURI, number, format)
- |  
- |  addDoubleListWithAttributes(self, parentPath, listName, childName, childAttributeName, values, format, attributes, nValues)
- |  
- |  addExternalLink(self, parentPath, url, fileFormat)
- |  
- |  addFloatVector(self, parentPath, elementName, vector, numElements, format)
- |  
- |  addHeader(self, toolName, version, authorName)
- |  
- |  addIntegerAttribute(self, elementPath, attributeName, number, format)
- |  
- |  addIntegerElement(self, parentPath, elementName, number, format)
- |  
- |  addIntegerElementNS(self, parentPath, qualifiedName, namespaceURI, number, format)
- |  
- |  addPoint(self, pointParentPath, x, y, z, format)
- |  
- |  addTextAttribute(self, elementPath, attributeName, attributeValue)
- |  
- |  addTextElement(self, parentPath, elementName, text)
- |  
- |  addTextElementAtIndex(self, parentPath, elementName, text, index)
- |  
- |  addTextElementNS(self, parentPath, qualifiedName, namespaceURI, text)
- |  
- |  addTextElementNSAtIndex(self, parentPath, qualifiedName, namespaceURI, text, index)
- |  
- |  checkAttribute(self, elementPath, attributeName)
- |      boolean return values from special return code is coded manually here
- |  
- |  checkDocumentHandle(self)
- |  
- |  checkElement(self, elementPath)
- |      boolean return values from special return code is coded manually here
- |  
- |  cleanup(self)
- |  
- |  close(self)
- |  
- |  closeAllDocuments(self)
- |  
- |  create(self, rootElementName)
- |  
- |  createElement(self, parentPath, elementName)
- |  
- |  createElementAtIndex(self, parentPath, elementName, index)
- |  
- |  createElementNS(self, parentPath, qualifiedName, namespaceURI)
- |  
- |  createElementNSAtIndex(self, parentPath, qualifiedName, index, namespaceURI)
- |  
- |  dTDValidate(self, DTDFilename)
- |  
- |  declareNamespace(self, elementPath, namespaceURI, prefix)
- |  
- |  exportDocumentAsString(self)
- |  
- |  getArray(self, arrayPath, elementName, arraySize)
- |  
- |  getArrayDimensionNames(self, arrayPath, dimensionNames_len)
- |  
- |  getArrayDimensionSizes(self, arrayPath, sizes_len)
- |  
- |  getArrayDimensionValues(self, arrayPath, dimension, dimensionValues_len)
- |  
- |  getArrayDimensions(self, arrayPath)
- |  
- |  getArrayElementCount(self, arrayPath, elementName)
- |  
- |  getArrayElementNames(self, arrayPath, elementType)
- |  
- |  getArrayParameterNames(self, arrayPath, parameterNames_len)
- |  
- |  getArrayParameters(self, arrayPath)
- |  
- |  getArrayValue(self, array, dimSize, dimPos, dims)
- |  
- |  getAttributeName(self, elementPath, attrIndex)
- |  
- |  getBooleanAttribute(self, elementPath, attributeName)
- |  
- |  getBooleanElement(self, elementPath)
- |  
- |  getChildNodeName(self, parentElementPath, index)
- |  
- |  getDocumentPath(self)
- |  
- |  getDoubleAttribute(self, elementPath, attributeName)
- |  
- |  getDoubleElement(self, elementPath)
- |  
- |  getFloatVector(self, vectorPath, eNumber)
- |  
- |  getIntegerAttribute(self, elementPath, attributeName)
- |  
- |  getIntegerElement(self, elementPath)
- |  
- |  getNamedChildrenCount(self, elementPath, childName)
- |  
- |  getNodeType(self, nodePath)
- |  
- |  getNumberOfAttributes(self, elementPath)
- |  
- |  getNumberOfChilds(self, elementPath)
- |  
- |  getPoint(self, pointParentPath)
- |  
- |  getPrintMsgFunc(self)
- |  
- |  getTextAttribute(self, elementPath, attributeName)
- |  
- |  getTextElement(self, elementPath)
- |  
- |  getVectorSize(self, vectorPath)
- |  
- |  getVersion(self)
- |  
- |  open(self, xmlInputFilename, recursive=False)
- |  
- |  openDocument(self, xmlFilename)
- |  
- |  openDocumentRecursive(self, xmlFilename, oMode)
- |  
- |  openHttp(self, httpURL)
- |  
- |  openString(self, xmlImportString)
- |  
- |  registerNamespace(self, namespaceURI, prefix)
- |  
- |  registerNamespacesFromDocument(self)
- |  
- |  removeAttribute(self, elementPath, attributeName)
- |  
- |  removeElement(self, elementPath)
- |  
- |  renameElement(self, parentPath, oldName, newName)
- |  
- |  save(self, fileName, recursive=False, remove=False)
- |      Save the main tixi document.
- |      If the document was opened recursively,
- |       * &#39;recursive&#39; tells to save linked nodes to their respecitve files, too.
- |       * &#39;remove&#39; tells to remove the links to external files after saving the complete CPACS inclusively all linked content to the main file.
- |      You cannot have &#39;remove&#39; without &#39;recursive&#39;.
- |  
- |  saveAndRemoveDocument(self, xmlFilename)
- |  
- |  saveCompleteDocument(self, xmlFilename)
- |  
- |  saveDocument(self, xmlFilename)
- |  
- |  schemaValidateFromFile(self, xsdFilename)
- |  
- |  schemaValidateFromString(self, xsdString)
- |  
- |  schemaValidateWithDefaultsFromFile(self, xsdFilename)
- |  
- |  setCacheEnabled(self, enabled)
- |  
- |  setElementNamespace(self, elementPath, namespaceURI, prefix)
- |  
- |  swapElements(self, element1Path, element2Path)
- |  
- |  uIDCheckDuplicates(self)
- |  
- |  uIDCheckExists(self, uID)
- |  
- |  uIDCheckLinks(self)
- |  
- |  uIDGetXPath(self, uID)
- |  
- |  uIDSetToXPath(self, xPath, uID)
- |  
- |  updateBooleanElement(self, elementPath, boolean)
- |  
- |  updateDoubleElement(self, elementPath, number, format)
- |  
- |  updateFloatVector(self, path, vector, numElements, format)
- |  
- |  updateIntegerElement(self, elementPath, number, format)
- |  
- |  updateTextElement(self, elementPath, text)
- |  
- |  usePrettyPrint(self, usePrettyPrint)
- |  
- |  xPathEvaluateNodeNumber(self, xPathExpression)
- |  
- |  xPathExpressionGetTextByIndex(self, xPathExpression, elementNumber)
- |  
- |  xPathExpressionGetXPath(self, xPathExpression, index)
- |  
- |  xSLTransformationToFile(self, xslFilename, resultFilename)
- |  
- |  xSLTransformationToString(self, xslFilename)
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  __dict__
- |      dictionary for instance variables (if defined)
- |  
- |  __weakref__
- |      list of weak references to the object (if defined)
- |  
- |  ----------------------------------------------------------------------
- |  Data and other attributes defined here:
- |  
- |  lib = &lt;CDLL &#39;libtixi3.so&#39;, handle 561426f95000&gt;
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We will now read the required information from the CPACS data set. Since we already know that the data set is valid, we will find all information about the expected data in the <a href="https://cpacs.de/pages/documentation.html">CPACS documentation</a> (he different ways to read and interpret a schema are explained in <a href="https://github.com/DLR-SL/CPACS_Seminar/tree/master/HowTos">tutorials from this workshop</a>).</p>
-<p>The structure of the <code>loadApplicationPointSets</code> can be represented as the following XSD diagram:</p>
+<p>The structure of the <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/75379068-a51b-aa5b-81fa-b0d3d4e41543.htm"><code>loadApplicationPointSets</code></a> can be represented as the following XSD diagram:</p>
 <p><img src="data:image/png;base64,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" alt="xsdDiagram_loadApplicationPointSets.png"></p>
-<p>First we want to check whether the optional <code>loadReferenceLine</code> exists and import the coordinates of its nodes.</p>
+<p>First we want to check whether the optional <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/7a985b67-4f8a-bd38-f9bf-e2e20606e591.htm"><code>loadReferenceLine</code></a> exists and import the coordinates of its nodes.</p>
 <p><em>Note: For the sake of simplicity, we make the assumptions that we expect our data in the first <code>loadApplicationPointSet</code> and that we can only process relative coordinates of the <code>loadReferenceLine</code>. Detailed error information (e.g., <code>else</code> conditions), as it should be considered in a tool implementation, is neglected as well.</em></p>
 
 </div>
@@ -13513,7 +13231,7 @@ class Tixi3(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Look for the first point set</span>
@@ -13555,27 +13273,6 @@ class Tixi3(builtins.object)
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Reference axis points:
-[0.0, 0.3, False, &#39;D150_iLOADS_W1_CompSeg1&#39;]
-[0.12, 0.3, 0.5, &#39;D150_iLOADS_W1_CompSeg1&#39;]
-[1.0, 0.4, 0.5, &#39;D150_iLOADS_W1_CompSeg1&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13610,7 +13307,7 @@ class Tixi3(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tigl3</span> <span class="kn">import</span> <span class="n">tigl3wrapper</span>
@@ -13635,7 +13332,7 @@ class Tixi3(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tigl3.configuration</span>
@@ -13661,7 +13358,7 @@ class Tixi3(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wing</span> <span class="o">=</span> <span class="n">uid_mgr</span><span class="o">.</span><span class="n">get_geometric_component</span><span class="p">(</span><span class="s1">&#39;D150_iLOADS_W1&#39;</span><span class="p">)</span>
@@ -13684,7 +13381,7 @@ class Tixi3(builtins.object)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># List of spars</span>
@@ -13709,32 +13406,6 @@ class Tixi3(builtins.object)
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>reading rib set #1 ...
-reading rib set #2 ...
-reading rib set #3 ...
-reading rib set #4 ...
-reading rib set #5 ...
-reading rib set #6 ...
-reading rib set #7 ...
-
-Done with reading 31 rib faces from 6 rib sets!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13746,7 +13417,7 @@ Done with reading 31 rib faces from 6 rib sets!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">OCC.Display.SimpleGui</span> <span class="kn">import</span> <span class="n">init_display</span>
@@ -13763,36 +13434,6 @@ Done with reading 31 rib faces from 6 rib sets!
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>INFO:OCC.Display.backend:backend loaded: qt-pyqt5
-INFO:OCC.Display.SimpleGui:GUI backend set to: qt-pyqt5
-Layer manager created
-Layer dimensions: 1024, 768
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-Many colors for color name blue, using first.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -13823,7 +13464,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">OCC.gp</span> <span class="kn">import</span> <span class="n">gp_Pnt</span>
@@ -13872,7 +13513,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">comp_uid</span> <span class="o">=</span> <span class="n">component_segment</span><span class="o">.</span><span class="n">get_uid</span><span class="p">()</span>
@@ -13897,7 +13538,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">OCC.BRepBuilderAPI</span> <span class="kn">import</span> <span class="n">BRepBuilderAPI_MakeEdge</span>
@@ -13922,7 +13563,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">pnt</span> <span class="ow">in</span> <span class="n">abs_points</span><span class="p">:</span>
@@ -13959,7 +13600,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">OCC.BRepBuilderAPI</span> <span class="kn">import</span> <span class="n">BRepBuilderAPI_MakeWire</span>
@@ -13983,7 +13624,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">OCC.BRepAdaptor</span> <span class="kn">import</span> <span class="n">BRepAdaptor_CompCurve</span><span class="p">,</span> <span class="n">BRepAdaptor_HCompCurve</span>
@@ -14011,7 +13652,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">OCC.GeomAPI</span> <span class="kn">import</span> <span class="n">GeomAPI_IntCS</span>
@@ -14041,7 +13682,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">intersec_pnts</span><span class="p">:</span>
@@ -14083,7 +13724,7 @@ Many colors for color name blue, using first.
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We have now intersected our reference line with the internal wing structure and thus determined the load application points. Now let's write the results back to CPACS.</p>
-<p>A look into the <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/38b0bdf3-8895-936b-d021-580d9ca7bdc6.htm">online documentation</a> reveals the following data structure for this:</p>
+<p>A look into the <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/378cea43-6e5e-7f71-d037-9cc342ad0a05.htm">online documentation</a> reveals the following data structure for this:</p>
 <div class="highlight"><pre><span></span><span class="nt">&lt;loadApplicationPointSet</span> <span class="na">uID=</span><span class="s">&quot;wingPointSet1&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;loadApplicationCoordinates&gt;</span>
         <span class="nt">&lt;pointIDs</span> <span class="na">mapType=</span><span class="s">&quot;vector&quot;</span><span class="nt">&gt;</span>1;2;...<span class="nt">&lt;/pointIDs&gt;</span>
@@ -14101,7 +13742,7 @@ Many colors for color name blue, using first.
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We could see from the documentation that the <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/38b0bdf3-8895-936b-d021-580d9ca7bdc6.htm">coordinates</a> of the load application points are stored as <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/32aea7db-266a-6dfa-5d16-f9b63c1e62a8.htm">stringVectorBaseType</a>. Therefore we first create corresponding lists in Python:</p>
+<p>We could see from the documentation that the <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/9f60efb6-9894-a1b2-0d1f-168480e9eae3.htm">coordinates</a> of the load application points are stored as <a href="https://www.cpacs.de/documentation/CPACS_loadCases/html/c4a6cbc4-d4cc-89cf-93dc-2c2aa99b4c1e.htm">stringVectorBaseType</a>. Therefore we first create corresponding lists in Python:</p>
 <p>(<em>Note: documentation links must be adopted to the new proposal once released</em>)</p>
 
 </div>
@@ -14109,7 +13750,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">id_vec</span><span class="p">,</span> <span class="n">x_vec</span><span class="p">,</span> <span class="n">y_vec</span><span class="p">,</span> <span class="n">z_vec</span> <span class="o">=</span> <span class="p">[],[],[],[]</span>
@@ -14137,7 +13778,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a childe-element &#39;loadApplicationCoordinates&#39;</span>
@@ -14167,7 +13808,7 @@ Many colors for color name blue, using first.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;output.xml&#39;</span>
@@ -14177,24 +13818,6 @@ Many colors for color name blue, using first.
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Output written successfully to output.xml.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
