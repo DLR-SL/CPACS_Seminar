@@ -1,6 +1,6 @@
 # CPACS Seminar
 
-The content of this page is used to introduce in working with CPACS. For this I like jupyter notebooks which you can run on your local PC to better followo and modify the examples.
+The content of this page is used to introduce in working with CPACS. You can run the jupyter notebooks on your local PC to better follow and modify the examples.
 
 ### Setting up Conda environments to run the examples
 
