@@ -7,7 +7,7 @@ The content of this page is used to introduce in working with CPACS. You can run
 If you have not set up your own Python environment I recommend using Conda as package and environment manager. In our case Miniconda is sufficient because we will set up our own environments indiviually. After installing Conda create a new environment (`conda create -n`) called `python3_cpacs` and install the `tigl3` and `tixi3` packages from `-c dlr-sc`:
 
 ```
-conda create -n python3_cpacs python=3.5 tigl3 tixi3 -c dlr-sc
+conda create -n python3_cpacs python=3 numpy tigl3 tixi3 -c dlr-sc
 ```
 
 Now we need to install jupyter to run the notebooks. Activate our new python-environmen and type:
