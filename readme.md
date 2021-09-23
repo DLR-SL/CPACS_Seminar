@@ -49,5 +49,5 @@ With Miniconda I experienced [this bug](https://github.com/jupyter/notebook/issu
   - [Download](https://github.com/DLR-SC/tigl/releases)
   - [Homepage](https://dlr-sc.github.io/tigl/)
   - [GitHub repository](https://github.com/DLR-SC/tigl/)
-  - [Documentation](http://tigl.sourceforge.net/Doc/tigl_usage.html)
+  - [Documentation](https://dlr-sc.github.io/tigl/doc/latest/index.html)
   - [More examples and tutorials](https://github.com/rainman110/tigl-workshop)
