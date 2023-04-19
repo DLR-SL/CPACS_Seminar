@@ -2,6 +2,8 @@
 
 The content of this page is used to introduce in working with CPACS. You can run the jupyter notebooks on your local PC to better follow and modify the examples.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DLR-SL/CPACS_Seminar/HEAD)
+
 ### Setting up Conda environments to run the examples
 
 If you have not set up your own Python environment I recommend using Conda as package and environment manager. In our case Miniconda is sufficient because we will set up our own environments indiviually. After installing Conda create a new environment (`conda create -n`) called `python3_cpacs` and install the `tigl3` and `tixi3` packages from `-c dlr-sc`:
