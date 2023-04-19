@@ -7,3 +7,4 @@ dependencies:
   - numpy
   - tixi3
   - tigl3
+  - jupyter
