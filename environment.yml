@@ -3,6 +3,7 @@ channels:
   - dlr-sc
   - conda-forge
 dependencies:
+  - python=3.9
   - numpy
   - tixi3
   - tigl3
