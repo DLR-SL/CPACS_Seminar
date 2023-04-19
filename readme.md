@@ -20,7 +20,7 @@ conda activate cpacsSeminar
 I recommend to have a look at the [Conda cheat sheet](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&ved=2ahUKEwiritrFk43oAhW0QUEAHTi_CH0QFjAFegQIAhAB&url=https%3A%2F%2Fdocs.conda.io%2Fprojects%2Fconda%2Fen%2F4.6.0%2F_downloads%2F52a95608c49671267e40c689e0bc00ca%2Fconda-cheatsheet.pdf&usg=AOvVaw3uUYEqas7NMuAmCCWAx_yl) to get a quick overview of Conda.
 
 ### Running Jupyter notebooks
-Within your active conda environment (remember: `conda activate python3_cpacs`) navigate to your tutorial directory and active the notebook (`*.ipynb`) with:
+Within your active conda environment (remember: `conda activate cpacsSeminar`) navigate to your tutorial directory and active the notebook (`*.ipynb`) with:
 ```
 jupyter-notebook notebookName.ipynb
 ```
