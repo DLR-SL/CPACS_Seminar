@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="D:/CPACS/Issues/develop/schema/cpacs_schema.xsd">
+       xsi:noNamespaceSchemaLocation="cpacs_schema.xsd">
   <header>
     <name>D150 wing</name>
     <description>example of a D150 wing from iLOADS project</description>
     <creator>DLR-AT, DLR-SL</creator>
     <timestamp>2020-07-10T00:00:00</timestamp>
     <version>0.1</version>
-    <cpacsVersion>3.3</cpacsVersion>
+    <cpacsVersion>3.2</cpacsVersion>
   </header>
   <vehicles>
     <aircraft>
