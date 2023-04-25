@@ -16,24 +16,14 @@ Activate our new python-environment via:
 conda activate cpacsSeminar
 ```
 
-Call Jupyter:
+Call JupyterLab:
 ```
-jupyter-notebook
+jupyter lab
 ```
 
 A browser should open automatically (if not, copy and paste the URL shown in the conda terminal into your browser). Navigate to the Notebook exercises (`*.ipynb`) and click to open.
 
-### Recommendations:
-
-- Have a look at the [Conda cheat sheet](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&ved=2ahUKEwiritrFk43oAhW0QUEAHTi_CH0QFjAFegQIAhAB&url=https%3A%2F%2Fdocs.conda.io%2Fprojects%2Fconda%2Fen%2F4.6.0%2F_downloads%2F52a95608c49671267e40c689e0bc00ca%2Fconda-cheatsheet.pdf&usg=AOvVaw3uUYEqas7NMuAmCCWAx_yl) to get a quick overview of Conda.
-
-- I like to use the [*JupyterLab*](https://jupyter.org/) extension when working with *Jupyter Notebooks*. Install an run it in your activated conda environment via:
-```
-conda install jupyterlab -y
-jupyter lab
-```
-
-## Additional material
+## Helpful material
 
 ### CPACS links
   - [Download](https://cpacs.de/pages/download.html)
