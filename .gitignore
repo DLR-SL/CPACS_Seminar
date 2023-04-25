@@ -2,6 +2,7 @@
 D150_v30_modified.xml
 ex1.igs
 .project
+Notebooks/LoadApplicationPoints/output.xml
 
 # Created by https://www.toptal.com/developers/gitignore/api/jupyternotebooks,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=jupyternotebooks,python
