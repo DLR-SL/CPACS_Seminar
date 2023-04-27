@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://www.cpacs.de/schema/v3_2_0/cpacs_schema.xsd">
+    <header>
+        <name>Simple CPACS Example</name>
+        <description>This is a simple CPACS example used for exercises</description>
+        <creator>Arthur Zamfir, DLR-SL</creator>
+        <timestamp>2023-04-27T12:00:00</timestamp>
+        <version>1.0.0</version>
+        <cpacsVersion>3.2</cpacsVersion>
+    </header>
+    <vehicles>
+        <aircraft>
+            <model uID="MyAircraft">
+                <name>Basic Aircraft</name>
+                <description>Basic Aircraft model used for exercises</description>
+            </model>
+        </aircraft>
+        <engines>
+            <engine uID="EngineDefinitionA">
+                <name>This is the Definition of EngineA</name>
+            </engine>
+        </engines>
+    </vehicles>
+</cpacs>
