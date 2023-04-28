@@ -21,7 +21,7 @@ Call JupyterLab:
 jupyter lab
 ```
 
-A browser should open automatically (if not, copy and paste the URL shown in the conda terminal into your browser). Navigate to the Notebook exercises (`*.ipynb`) and click to open.
+A browser should open automatically (if not, copy and paste the URL shown in the conda terminal into your browser). Navigate to the Notebook exercises (`*.ipynb`) and open it.
 
 ## Helpful material
 
