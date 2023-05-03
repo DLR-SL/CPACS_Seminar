@@ -1,0 +1,1 @@
+tixi_h.open('resources/CPACS_simple.xml')
