@@ -1,0 +1,82 @@
+<wing uID="wing1">
+  <name>Wing</name>
+  <transformation/>
+  <sections>
+    <section uID="wing1section1">
+      <name>Section 1</name>
+      <transformation/>
+      <elements>
+        <element uID="wing1section1element1">
+          <name>wing root element</name>
+          <airfoilUID>NACA0009</airfoilUID>
+          <transformation/>
+        </element>
+      </elements>
+    </section>
+    <section uID="wing1section2">
+      <name>Section 2</name>
+      <transformation/>
+      <elements>
+        <element uID="wing1section2element1">
+          <name>wing tip element</name>
+          <airfoilUID>NACA0009</airfoilUID>
+          <transformation>
+            <scaling>
+              <x>0.50</x>
+              <z>0.50</z>
+            </scaling>
+          </transformation>
+        </element>
+      </elements>
+    </section>
+    <section uID="wing1section3">
+      <name>Section 3</name>
+      <transformation>
+        <rotation>
+          <x>45.00</x>
+        </rotation>
+      </transformation>
+      <elements>
+        <element uID="wing1section3element1">
+          <name>wing root element</name>
+          <airfoilUID>NACA0009</airfoilUID>
+          <transformation>
+            <scaling>
+              <x>0.20</x>
+              <z>0.20</z>
+            </scaling>
+          </transformation>
+        </element>
+      </elements>
+    </section>
+  </sections>
+  <positionings>
+    <positioning uID="wingTipPos">
+      <name>Tip position</name>
+      <length>1.0</length>
+      <sweepAngle>22.50</sweepAngle>
+      <dihedralAngle>0.0</dihedralAngle>
+      <toSectionUID>wing1section2</toSectionUID>
+    </positioning>
+    <positioning uID="wingletPos">
+      <name>Winglet position</name>
+      <length>0.25</length>
+      <sweepAngle>70.0</sweepAngle>
+      <dihedralAngle>45.0</dihedralAngle>
+      <fromSectionUID>wing1section2</fromSectionUID>
+      <toSectionUID>wing1section3</toSectionUID>
+    </positioning>
+  </positionings>
+  <segments>
+    <segment uID="wing1segment1">
+      <name>Wing segment</name>
+      <fromElementUID>wing1section1element1</fromElementUID>
+      <toElementUID>wing1section2element1</toElementUID>
+    </segment>
+    <segment uID="wing1segment2">
+      <name>Wing segment</name>
+      <fromElementUID>wing1section2element1</fromElementUID>
+      <toElementUID>wing1section3element1</toElementUID>
+    </segment>
+  </segments>
+</wing>
