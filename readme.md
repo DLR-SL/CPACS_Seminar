@@ -4,6 +4,11 @@ This project aims to introduce you to working with CPACS. You can download/clone
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DLR-SL/CPACS_Seminar/HEAD)
 
+If this does not work:
+  - go to [mybinder.org](https://mybinder.org/) 
+  - copy `https://github.com/DLR-SL/CPACS_Seminar` into the `GitHub repository name or URL` field
+  - click `launch` and get a coffee (it may take a while)...
+
 ## Setting up Conda environments and run the examples
 
 It is recommended to use [Conda](https://docs.conda.io) as a Python package and environment manager. Create a new environment from the `environment.yml` file:
