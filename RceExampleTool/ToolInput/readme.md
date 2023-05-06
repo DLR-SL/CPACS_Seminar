@@ -1,1 +1,0 @@
-This is the directory where the incoming CPACS file is been stored.
