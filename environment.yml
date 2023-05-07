@@ -7,6 +7,8 @@ dependencies:
   - numpy
   - tixi3
   - tigl3
+  - lxml
+  - matplotlib
   - pythreejs=2.4.2
   - jupyter
   - ipydatawidgets=4.3.2
