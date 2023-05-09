@@ -25,7 +25,7 @@ def load_external_libs():
 
 def preprocessing():
 
-    tixi_h.registerNamespace("http://www.cpacs.de/initializer", "in")
+    tixi_h.registerNamespacesFromDocument()
 
     base_xPath = "/cpacs/toolspecific/tool[name='Initializer']/in:initializer/"
     wingParameters["span"] = tixi_h.getDoubleElement(
