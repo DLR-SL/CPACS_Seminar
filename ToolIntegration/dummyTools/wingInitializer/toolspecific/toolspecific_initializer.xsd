@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://www.cpacs.de/initializer"
+        xmlns="http://www.cpacs.de/initializer"
+        elementFormDefault="qualified">
+
+    <xsd:element name="initializer" type="initializerType"/>
+
+    <xsd:complexType name="initializerType">
+        <xsd:all>
+            <xsd:element name="wingParameters"
+                type="wingParametersType" />
+        </xsd:all>
+        <xsd:attribute name="schemaVersion">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="1.0"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="wingParametersType">
+        <xsd:annotation>
+        	<xsd:documentation>Parameter of the wing</xsd:documentation>
+        </xsd:annotation>
+        <xsd:all>
+        	<xsd:element name="span">
+        		<xsd:annotation>
+        			<xsd:documentation>Span</xsd:documentation>
+        		</xsd:annotation>
+        		<xsd:simpleType>
+        			<xsd:restriction base="xsd:double">
+        				<xsd:minExclusive value="0" />
+        			</xsd:restriction>
+        		</xsd:simpleType>
+        	</xsd:element>
+        	<xsd:element name="rootChord">
+        		<xsd:annotation>
+        			<xsd:documentation>
+        				Root chord length
+        			</xsd:documentation>
+        		</xsd:annotation>
+        		<xsd:simpleType>
+        			<xsd:restriction base="xsd:double">
+        				<xsd:minExclusive value="0" />
+        			</xsd:restriction>
+        		</xsd:simpleType>
+        	</xsd:element>
+        	<xsd:element name="taperRatio">
+                <xsd:annotation>
+                	<xsd:documentation>Taper Ratio</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+        			<xsd:restriction base="xsd:double">
+        				<xsd:minInclusive value="1"/>
+        			</xsd:restriction>
+        		</xsd:simpleType>
+        	</xsd:element>
+        	<xsd:element name="sweep">
+                <xsd:annotation>
+                	<xsd:documentation>Sweep Angle [deg]</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+        			<xsd:restriction base="xsd:double">
+        				<xsd:minInclusive value="-45"/>
+        				<xsd:maxInclusive value="45"/>
+        			</xsd:restriction>
+        		</xsd:simpleType>
+        	</xsd:element>
+        	<xsd:element name="dihedral">
+                <xsd:annotation>
+                	<xsd:documentation>Dihedral angle [deg]</xsd:documentation>
+                </xsd:annotation>
+                <xsd:simpleType>
+        			<xsd:restriction base="xsd:double">
+        				<xsd:minInclusive value="-20"/>
+        				<xsd:maxInclusive value="20"/>
+        			</xsd:restriction>
+        		</xsd:simpleType>
+        	</xsd:element>
+        </xsd:all>
+    </xsd:complexType>
+
+</xsd:schema>

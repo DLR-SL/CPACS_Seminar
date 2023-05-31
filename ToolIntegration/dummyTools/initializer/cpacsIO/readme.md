@@ -1,1 +1,0 @@
-This directory stores incoming and outgoing CPACS files.
