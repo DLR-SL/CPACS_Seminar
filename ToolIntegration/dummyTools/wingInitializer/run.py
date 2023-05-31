@@ -27,7 +27,7 @@ def preprocessing():
 
     tixi_h.registerNamespacesFromDocument()
 
-    base_xPath = "/cpacs/toolspecific/tool[name='Initializer']/in:initializer/"
+    base_xPath = "/cpacs/toolspecific/tool[name='wingInitializer']/in:wingInitializer/"
     wingParameters["span"] = tixi_h.getDoubleElement(
         base_xPath + "in:wingParameters/in:span")
     wingParameters["rootChord"] = tixi_h.getDoubleElement(

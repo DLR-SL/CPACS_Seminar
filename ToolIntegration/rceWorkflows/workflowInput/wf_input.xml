@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="../schemaFiles/cpacs_schema.xsd"
+       xsi:schemaLocation="http://www.cpacs.de/wingInitializer ../schemaFiles/toolspecific_wingInitializer.xsd"
+       xmlns:in="http://www.cpacs.de/wingInitializer">
+  <header>
+    <name>CPACS tool integration demo</name>
+    <creator>M. Alder</creator>
+    <timestamp>2023-05-06T12:00:00</timestamp>
+    <version>1.0</version>
+    <cpacsVersion>3.4</cpacsVersion>
+    <updates>
+    	<update>
+		    <creator>M. Alder</creator>
+		    <timestamp>2023-05-06T12:00:00</timestamp>
+		    <version>1.0</version>
+		    <cpacsVersion>3.4</cpacsVersion>
+		    <modification>Create initial input</modification>
+    	</update>
+    </updates>
+  </header>
+  <toolspecific>
+  	<tool>
+		<name>wingInitializer</name>
+		<version>1.0</version>
+		<in:wingInitializer schemaVersion="1.0">
+			<in:wingParameters>
+				<in:span>3.0</in:span>
+				<in:rootChord>1.0</in:rootChord>
+				<in:taperRatio>3</in:taperRatio>
+				<in:sweep>20.</in:sweep>
+				<in:dihedral>5.</in:dihedral>
+			</in:wingParameters>
+		</in:wingInitializer>
+	</tool>
+  </toolspecific>
+</cpacs>

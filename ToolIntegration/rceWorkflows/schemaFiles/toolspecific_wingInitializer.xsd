@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+        targetNamespace="http://www.cpacs.de/wingInitializer"
+        xmlns="http://www.cpacs.de/wingInitializer"
+        elementFormDefault="qualified">
+
+    <xsd:element name="wingInitializer" type="wingInitializerType"/>
+
+    <xsd:complexType name="wingInitializerType">
+	    <xsd:all>
+	    	<xsd:element name="wingParameters"
+	    		type="wingParametersType">
+	    	</xsd:element>
+	    </xsd:all>
+	    <xsd:attribute name="schemaVersion">
+	        <xsd:simpleType>
+	            <xsd:restriction base="xsd:string">
+	                <xsd:enumeration value="1.0"/>
+	            </xsd:restriction>
+	        </xsd:simpleType>
+	    </xsd:attribute>
+    </xsd:complexType>
+
+
+    <xsd:complexType name="wingParametersType">
+    	<xsd:all>
+    		<xsd:element name="span">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:double">
+    					<xsd:minInclusive value="1"></xsd:minInclusive>
+    					<xsd:maxInclusive value="6"></xsd:maxInclusive>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="rootChord" type="xsd:double"></xsd:element>
+    		<xsd:element name="taperRatio">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:double">
+    					<xsd:minExclusive value="1"></xsd:minExclusive>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="sweep">
+    			<xsd:simpleType>
+    				<xsd:restriction base="xsd:double">
+    					<xsd:minExclusive value="0"></xsd:minExclusive>
+    				</xsd:restriction>
+    			</xsd:simpleType>
+    		</xsd:element>
+    		<xsd:element name="dihedral" type="xsd:double"></xsd:element>
+    	</xsd:all>
+    </xsd:complexType>
+</xsd:schema>

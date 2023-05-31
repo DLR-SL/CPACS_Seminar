@@ -1,0 +1,129 @@
+{
+  "identifier" : "1db5b9f5-e267-4d5f-b5c3-090f512dd86d",
+  "workflowVersion" : "5",
+  "name" : "workflow_demo_2023-05-31_22:14:23_04",
+  "nodes" : [ {
+    "identifier" : "5833a91f-8b67-4996-81d5-7c8b2196f07a",
+    "name" : "Input Provider",
+    "location" : "406:303",
+    "zIndex" : "0",
+    "active" : "true",
+    "component" : {
+      "identifier" : "de.rcenvironment.inputprovider",
+      "version" : "3.2",
+      "name" : "Input Provider"
+    },
+    "configuration" : {
+      "storeComponentHistoryData" : "true"
+    },
+    "dynamicOutputs" : [ {
+      "identifier" : "dcb336f6-9592-4315-a417-c2f3efc82f6e",
+      "name" : "wf_input",
+      "epIdentifier" : "default",
+      "datatype" : "FileReference",
+      "metadata" : {
+        "startValue" : "CPACS_dummies/workflowInput/wf_input.xml"
+      }
+    } ]
+  }, {
+    "identifier" : "0f825a49-96a6-4329-b4bb-f5b2af2ab4dc",
+    "name" : "Output Writer",
+    "location" : "665:303",
+    "zIndex" : "1",
+    "active" : "true",
+    "component" : {
+      "identifier" : "de.rcenvironment.outputwriter",
+      "version" : "2.1",
+      "name" : "Output Writer"
+    },
+    "configuration" : {
+      "OWWritePath" : "${targetRootFolder}",
+      "OverwriteFilesAndDirs" : "false",
+      "SelectRootOnWorkflowStart" : "false",
+      "SelectedRoot" : "${dir:workspace}/CPACS_dummies",
+      "outputLocations" : "{}",
+      "storeComponentHistoryData" : "true"
+    },
+    "dynamicInputs" : [ {
+      "identifier" : "1f6d25c5-cbfc-46c0-b721-67dc35d4c611",
+      "name" : "output",
+      "epIdentifier" : "default",
+      "group" : "write",
+      "datatype" : "FileReference",
+      "metadata" : {
+        "filename" : "output_[Timestamp]",
+        "folderForSaving" : "[root]\\results",
+        "inputExecutionConstraint_4aae3eea" : "Required",
+        "inputHandling_73b1056e" : "Queue"
+      }
+    } ]
+  }, {
+    "identifier" : "07b9dc1b-b22b-42a8-ada2-dbe627fefbdb",
+    "name" : "TiGL",
+    "location" : "645:376",
+    "zIndex" : "2",
+    "active" : "true",
+    "component" : {
+      "identifier" : "de.rcenvironment.tiglviewer",
+      "version" : "3.0",
+      "name" : "TiGL Viewer"
+    },
+    "configuration" : {
+      "storeComponentHistoryData" : "true"
+    },
+    "staticInputs" : [ {
+      "identifier" : "13b0498c-57d7-4bb8-bf9d-fe4a6f8adaca",
+      "name" : "TiGL Viewer File",
+      "datatype" : "FileReference"
+    } ],
+    "staticOutputs" : [ {
+      "identifier" : "6788790e-0fde-4461-adbc-f00cc051b1e6",
+      "name" : "TiGL Viewer File",
+      "datatype" : "FileReference"
+    } ]
+  }, {
+    "identifier" : "73d82502-cdb3-431a-940f-098b78407040",
+    "name" : "wingInitializer",
+    "location" : "509:283",
+    "zIndex" : "3",
+    "active" : "true",
+    "component" : {
+      "identifier" : "de.rcenvironment.integration.common.wingInitializer",
+      "version" : "1.0",
+      "name" : "wingInitializer"
+    },
+    "configuration" : {
+      "chosenDeleteTempDirBehavior" : "deleteWorkingDirectoriesAfterWorkflowExecution",
+      "storeComponentHistoryData" : "true"
+    },
+    "staticInputs" : [ {
+      "identifier" : "636f9c86-46cc-4234-8120-041a9ee9b156",
+      "name" : "CPACS_in",
+      "datatype" : "FileReference",
+      "metadata" : {
+        "endpointFileName" : ""
+      }
+    } ],
+    "staticOutputs" : [ {
+      "identifier" : "05c663b5-97e1-4038-a2ac-49b583293bc4",
+      "name" : "CPACS_out",
+      "datatype" : "FileReference"
+    } ]
+  } ],
+  "connections" : [ {
+    "source" : "5833a91f-8b67-4996-81d5-7c8b2196f07a",
+    "output" : "dcb336f6-9592-4315-a417-c2f3efc82f6e",
+    "target" : "73d82502-cdb3-431a-940f-098b78407040",
+    "input" : "636f9c86-46cc-4234-8120-041a9ee9b156"
+  }, {
+    "source" : "73d82502-cdb3-431a-940f-098b78407040",
+    "output" : "05c663b5-97e1-4038-a2ac-49b583293bc4",
+    "target" : "0f825a49-96a6-4329-b4bb-f5b2af2ab4dc",
+    "input" : "1f6d25c5-cbfc-46c0-b721-67dc35d4c611"
+  }, {
+    "source" : "73d82502-cdb3-431a-940f-098b78407040",
+    "output" : "05c663b5-97e1-4038-a2ac-49b583293bc4",
+    "target" : "07b9dc1b-b22b-42a8-ada2-dbe627fefbdb",
+    "input" : "13b0498c-57d7-4bb8-bf9d-fe4a6f8adaca"
+  } ]
+}
