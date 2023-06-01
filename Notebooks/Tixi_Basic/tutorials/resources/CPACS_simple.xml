@@ -33,7 +33,7 @@
     </airports>
     <toolspecific>
         <mytool>
-            <mission uID="FRAtoEWRID">
+            <mission uID="FRAtoEWR">
             <name>Frankfurt to Newark</name>
             <description>Test Mission</description>
             <flightPath>
