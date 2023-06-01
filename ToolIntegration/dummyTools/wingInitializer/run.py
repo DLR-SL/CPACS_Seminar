@@ -3,15 +3,7 @@ import datetime
 import numpy as np
 from tixi3 import tixi3wrapper
 
-wingParameters = {
-    "span": None,
-    "rootChord": None,
-    "tipChord": None,
-    "taperRatio": None,
-    "sweep": None,
-    "dihedral": None,
-    "profile": None
-}
+
 
 
 def load_external_libs():
@@ -22,51 +14,7 @@ def load_external_libs():
     except Exception as e:
         print("Could not load TIXI! Error message is: {}".format(e))
 
-
-def preprocessing():
-
-    tixi_h.registerNamespacesFromDocument()
-
-    base_xPath = "/cpacs/toolspecific/tool[name='wingInitializer']/in:wingInitializer/"
-    wingParameters["span"] = tixi_h.getDoubleElement(
-        base_xPath + "in:wingParameters/in:span")
-    wingParameters["rootChord"] = tixi_h.getDoubleElement(
-        base_xPath + "in:wingParameters/in:rootChord")
-    wingParameters["taperRatio"] = tixi_h.getDoubleElement(
-        base_xPath + "in:wingParameters/in:taperRatio")
-    wingParameters["sweep"] = tixi_h.getDoubleElement(
-        base_xPath + "in:wingParameters/in:sweep")
-    wingParameters["dihedral"] = tixi_h.getDoubleElement(
-        base_xPath + "in:wingParameters/in:dihedral")
-
-
-def compute():
-
-    print(wingParameters["taperRatio"])
-    wingParameters["tipChord"] = wingParameters["rootChord"] / \
-        wingParameters["taperRatio"]
-
-    wingParameters["profile"] = {
-        "x": [1.0, 0.99572, 0.98296, 0.96194, 0.93301, 0.89668, 0.85355, 0.80438, 0.75, 0.69134, 0.62941, 0.56526, 0.5, 0.43474, 0.37059, 0.33928, 0.30866, 0.27886, 0.25, 0.22221, 0.19562, 0.17033, 0.14645, 0.12408, 0.10332, 0.08427, 0.06699, 0.05156, 0.03806, 0.02653, 0.01704, 0.00961, 0.00428, 0.00107,
-              0.0, 0.00107, 0.00428, 0.00961, 0.01704, 0.02653, 0.03806, 0.05156, 0.06699, 0.08427, 0.10332, 0.12408, 0.14645, 0.17033, 0.19562, 0.22221, 0.25, 0.27886, 0.30866, 0.33928, 0.37059, 0.43474, 0.5, 0.56526, 0.62941, 0.69134, 0.75, 0.80438, 0.85355, 0.89668, 0.93301, 0.96194, 0.98296, 0.99572, 1.0],
-        "z": [0.0, 0.00057, 0.00218, 0.00463, 0.0077, 0.01127, 0.01522, 0.01945, 0.02384, 0.02823, 0.03247, 0.03638, 0.03978, 0.04248, 0.04431, 0.04484, 0.04509, 0.04504, 0.04466, 0.04397, 0.04295, 0.04161, 0.03994, 0.03795, 0.03564, 0.03305, 0.03023, 0.0272, 0.02395, 0.02039, 0.01646, 0.01214, 0.00767, 0.00349, 0.0, -0.00349, -
-              0.00767, -0.01214, -0.01646, -0.02039, -0.02395, -0.0272, -0.03023, -0.03305, -0.03564, -0.03795, -0.03994, -0.04161, -0.04295, -0.04397, -0.04466, -0.04504, -0.04509, -0.04484, -0.04431, -0.04248, -0.03978, -0.03638, -0.03247, -0.02823, -0.02384, -0.01945, -0.01522, -0.01127, -0.0077, -0.00463, -0.00218, -0.00057, 0.0]
-    }
-
-
-def postprocessing():
-
-    # Add provenance information:
-    tixi_h.createElement("/cpacs/header/updates", "update")
-    xPath = "/cpacs/header/updates/update[last()]"
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-
-    tixi_h.addTextElement(xPath, "creator", "Initializer tool")
-    tixi_h.addTextElement(xPath, "timestamp", timestamp)
-    tixi_h.addTextElement(xPath, "version", "1.0")
-    tixi_h.addTextElement(xPath, "cpacsVersion", "3.4")
-    tixi_h.addTextElement(xPath, "modification", "Add wing")
-
+def create_cpacs_wing():
     tixi_h.createElement("/cpacs", "vehicles")
     tixi_h.createElement("/cpacs/vehicles", "profiles")
     tixi_h.createElement("/cpacs/vehicles/profiles", "wingAirfoils")
@@ -185,32 +133,93 @@ def postprocessing():
         wing_xPath+"/segments/segment[1]", "toElementUID", "wing1section2element1")
 
 
-def main():
-
-    print('========= Welcome to Initializer =========')
-
-    workingDir = os.getcwd()
-
-    # Input/Output definition
-    cpacsIn = os.path.join(workingDir, 'cpacsIO', 'CPACS_in.xml')
-    cpacsOut = os.path.join(workingDir, 'cpacsIO', 'CPACS_out.xml')
+def preprocessing():
 
     # Load Tixi
     load_external_libs()
 
     # Open CPACS file
-    print('Start reading CPACS file...')
+    cpacsIn = os.path.join(os.getcwd(), 'cpacsIO', 'CPACS_in.xml')
     try:
         tixi_h.open(cpacsIn)
     except:
         print('TIXI could not read input file.')
 
+    
+    # Read CPACS data
+    ## Register toolspecific namespace
+    tixi_h.registerNamespacesFromDocument()
+
+    ## Get toolspecific data
+    base_xPath = "/cpacs/toolspecific/tool[name='wingInitializer']/in:wingInitializer/"
+    wingParameters["span"] = tixi_h.getDoubleElement(
+        base_xPath + "in:wingParameters/in:span")
+    wingParameters["rootChord"] = tixi_h.getDoubleElement(
+        base_xPath + "in:wingParameters/in:rootChord")
+    wingParameters["taperRatio"] = tixi_h.getDoubleElement(
+        base_xPath + "in:wingParameters/in:taperRatio")
+    wingParameters["sweep"] = tixi_h.getDoubleElement(
+        base_xPath + "in:wingParameters/in:sweep")
+    wingParameters["dihedral"] = tixi_h.getDoubleElement(
+        base_xPath + "in:wingParameters/in:dihedral")
+
+
+def compute():
+
+    print(wingParameters["taperRatio"])
+    wingParameters["tipChord"] = wingParameters["rootChord"] / \
+        wingParameters["taperRatio"]
+
+    wingParameters["profile"] = {
+        "x": [1.0, 0.99572, 0.98296, 0.96194, 0.93301, 0.89668, 0.85355, 0.80438, 0.75, 0.69134, 0.62941, 0.56526, 0.5, 0.43474, 0.37059, 0.33928, 0.30866, 0.27886, 0.25, 0.22221, 0.19562, 0.17033, 0.14645, 0.12408, 0.10332, 0.08427, 0.06699, 0.05156, 0.03806, 0.02653, 0.01704, 0.00961, 0.00428, 0.00107,
+              0.0, 0.00107, 0.00428, 0.00961, 0.01704, 0.02653, 0.03806, 0.05156, 0.06699, 0.08427, 0.10332, 0.12408, 0.14645, 0.17033, 0.19562, 0.22221, 0.25, 0.27886, 0.30866, 0.33928, 0.37059, 0.43474, 0.5, 0.56526, 0.62941, 0.69134, 0.75, 0.80438, 0.85355, 0.89668, 0.93301, 0.96194, 0.98296, 0.99572, 1.0],
+        "z": [0.0, 0.00057, 0.00218, 0.00463, 0.0077, 0.01127, 0.01522, 0.01945, 0.02384, 0.02823, 0.03247, 0.03638, 0.03978, 0.04248, 0.04431, 0.04484, 0.04509, 0.04504, 0.04466, 0.04397, 0.04295, 0.04161, 0.03994, 0.03795, 0.03564, 0.03305, 0.03023, 0.0272, 0.02395, 0.02039, 0.01646, 0.01214, 0.00767, 0.00349, 0.0, -0.00349, -
+              0.00767, -0.01214, -0.01646, -0.02039, -0.02395, -0.0272, -0.03023, -0.03305, -0.03564, -0.03795, -0.03994, -0.04161, -0.04295, -0.04397, -0.04466, -0.04504, -0.04509, -0.04484, -0.04431, -0.04248, -0.03978, -0.03638, -0.03247, -0.02823, -0.02384, -0.01945, -0.01522, -0.01127, -0.0077, -0.00463, -0.00218, -0.00057, 0.0]
+    }
+
+
+def postprocessing():
+
+    # Add provenance information
+    tixi_h.createElement("/cpacs/header/updates", "update")
+    xPath = "/cpacs/header/updates/update[last()]"
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+
+    tixi_h.addTextElement(xPath, "creator", "Initializer tool")
+    tixi_h.addTextElement(xPath, "timestamp", timestamp)
+    tixi_h.addTextElement(xPath, "version", "1.0")
+    tixi_h.addTextElement(xPath, "cpacsVersion", "3.4")
+    tixi_h.addTextElement(xPath, "modification", "Add wing")
+
+    # Create aircraft wing
+    create_cpacs_wing()
+    
+    # Write CPACS file
+    cpacsOut = os.path.join(os.getcwd(), 'cpacsIO', 'CPACS_out.xml')
+    tixi_h.save(cpacsOut)
+    tixi_h.close()
+
+
+def main():
+
+    print('========= Welcome to Initializer =========')
+
+    global wingParameters
+    wingParameters = {
+        "span": None,
+        "rootChord": None,
+        "tipChord": None,
+        "taperRatio": None,
+        "sweep": None,
+        "dihedral": None,
+        "profile": None
+    }
+
     preprocessing()
     compute()
     postprocessing()
 
-    tixi_h.save(cpacsOut)
-    tixi_h.close()
+    
 
 
 if __name__ == '__main__':

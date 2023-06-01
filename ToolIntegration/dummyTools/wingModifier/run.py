@@ -26,7 +26,7 @@ def preprocessing():
     except:
         print('TIXI could not read input file.')
 
-    # Read CPACS data:
+    # Read CPACS data
     toolData["length"] = tixi_h.getDoubleElement(
         "/cpacs/vehicles/aircraft/model[1]/wings/wing[1]/positionings/positioning[1]/length")
 
@@ -38,7 +38,7 @@ def compute():
 
 def postprocessing():
 
-    # Add provenance information:
+    # Add provenance information
     tixi_h.createElement("/cpacs/header/updates", "update")
     xPath = "/cpacs/header/updates/update[last()]"
     timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
@@ -49,13 +49,13 @@ def postprocessing():
     tixi_h.addTextElement(xPath, "cpacsVersion", "3.4")
     tixi_h.addTextElement(xPath, "modification", "Modify wing span")
 
-    # Update wing length in CPACS:
+    # Update wing length in CPACS
     tixi_h.updateDoubleElement(
         "/cpacs/vehicles/aircraft/model[1]/wings/wing[1]/positionings/positioning[1]/length",
         toolData["length"],
         "%.5f")
 
-    # Write CPACS file;
+    # Write CPACS file
     cpacsOut = os.path.join(os.getcwd(), 'ToolOutput', 'CPACS_out.xml')
     tixi_h.save(cpacsOut)
     tixi_h.close()
