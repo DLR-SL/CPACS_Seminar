@@ -28,6 +28,14 @@ jupyter lab
 
 A browser should open automatically (if not, copy and paste the URL shown in the conda terminal into your browser). Navigate to the Notebook exercises (`*.ipynb`) and open it.
 
+## Reset local changes
+
+You have practiced a lot and now you want to reset the initial state? The local changes can be overwritten with the current state from GitHub as follows:
+```
+git fetch
+git reset --hard origin/master
+```
+
 ## Helpful material
 
 ### CPACS links
