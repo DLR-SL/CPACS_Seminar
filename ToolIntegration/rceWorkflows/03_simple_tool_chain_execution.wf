@@ -1,11 +1,11 @@
 {
   "identifier" : "549bc0ce-b1f5-4c99-a153-4e25dff56ce0",
   "workflowVersion" : "5",
-  "name" : "workflow_demo_2023-05-31_22:15:31_05",
+  "name" : "workflow_demo_2023-06-01_10:18:14_01",
   "nodes" : [ {
     "identifier" : "61c3b775-bf2f-4e2d-9340-38d811c6da2b",
     "name" : "Input Provider",
-    "location" : "406:303",
+    "location" : "242:163",
     "zIndex" : "0",
     "active" : "true",
     "component" : {
@@ -28,7 +28,7 @@
   }, {
     "identifier" : "8d8fb910-c842-4971-af3f-d04859e0eaa7",
     "name" : "Output Writer",
-    "location" : "828:303",
+    "location" : "664:163",
     "zIndex" : "1",
     "active" : "true",
     "component" : {
@@ -60,7 +60,7 @@
   }, {
     "identifier" : "1db27271-a485-4bb5-802f-7d4d2cbcb7be",
     "name" : "TiGL",
-    "location" : "504:396",
+    "location" : "340:256",
     "zIndex" : "2",
     "active" : "true",
     "component" : {
@@ -84,7 +84,7 @@
   }, {
     "identifier" : "0b271239-8542-4ea1-902c-5e269c3283da",
     "name" : "TiGL Viewer",
-    "location" : "645:396",
+    "location" : "481:256",
     "zIndex" : "5",
     "active" : "true",
     "component" : {
@@ -108,7 +108,7 @@
   }, {
     "identifier" : "75b79ac8-53f1-43ba-878e-3f684f6a7e3b",
     "name" : "wingInitializer",
-    "location" : "504:283",
+    "location" : "340:143",
     "zIndex" : "3",
     "active" : "true",
     "component" : {
@@ -136,7 +136,7 @@
   }, {
     "identifier" : "679c1ec2-d21d-41b6-8910-a1fa8677e036",
     "name" : "wingModifier",
-    "location" : "645:283",
+    "location" : "481:143",
     "zIndex" : "4",
     "active" : "true",
     "component" : {
