@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.cpacs.de/toolA"
+	xmlns="http://www.cpacs.de/toolA"
+	elementFormDefault="qualified">
+
+	<xsd:element name="toolA" type="toolAType" />
+
+	<xsd:complexType name="toolAType">
+		<xsd:all>
+			<xsd:element name="settings"
+				type="settingsType" />
+		</xsd:all>
+		<xsd:attribute name="schemaVersion">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="1.0" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="settingsType">
+		<xsd:annotation>
+			<xsd:documentation>Tool settings</xsd:documentation>
+		</xsd:annotation>
+		<xsd:all>
+			<xsd:element name="writeLogEntry" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>Write logEntry node to CPACS header (0|1 or false|true).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:all>
+	</xsd:complexType>
+
+</xsd:schema>
