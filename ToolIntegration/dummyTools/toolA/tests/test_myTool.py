@@ -14,7 +14,7 @@ def rel_location():
 def test_toolRun():
 
     # Copy input file to cpacsIO directory:
-    src = os.path.join(rel_location(),"testData/CPACS_in.xml")
+    src = os.path.join(rel_location(),"testData/airports.xml")
     dst = os.path.join(rel_location(),"../cpacsIO/CPACS_in.xml")
     shutil.copyfile(src,dst)
 
