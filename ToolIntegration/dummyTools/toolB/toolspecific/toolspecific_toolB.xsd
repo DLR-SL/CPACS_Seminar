@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.cpacs.de/toolA"
-	xmlns="http://www.cpacs.de/toolA"
+	targetNamespace="http://www.cpacs.de/toolB"
+	xmlns="http://www.cpacs.de/toolB"
 	elementFormDefault="qualified">
 
-	<xsd:element name="toolA" type="toolAType" />
+	<xsd:element name="toolB" type="toolBType" />
 
-	<xsd:complexType name="toolAType">
+	<xsd:complexType name="toolBType">
 		<xsd:all>
 			<xsd:element name="settings"
 				type="settingsType" />

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.cpacs.de/schema/v3_2_0/cpacs_schema.xsd">
+  <header>
+    <name>Simple CPACS Example</name>
+    <description>This is a simple CPACS example used for exercises</description>
+    <creator>Arthur Zamfir, DLR-SL</creator>
+    <timestamp>2023-04-27T12:00:00</timestamp>
+    <version>1.0.0</version>
+    <cpacsVersion>3.2</cpacsVersion>
+  </header>
+  <vehicles>
+    <aircraft>
+      <model uID="MyAircraft">
+        <name>Basic Aircraft</name>
+        <description>Basic Aircraft model used for exercises</description>
+      </model>
+    </aircraft>
+  </vehicles>
+  <airports>
+    <airport uID="FRA">
+      <name>Frankfurt Main International Airport, Germany</name>
+      <positionNorth>50.034444</positionNorth>
+      <positionEast>8.571389</positionEast>
+      <elevation>111</elevation>
+    </airport>
+    <airport uID="EWR">
+      <name>Newark Liberty International Airport , New York, United States</name>
+      <positionNorth>40.6925</positionNorth>
+      <positionEast>-74.168611</positionEast>
+      <elevation>5</elevation>
+    </airport>
+    <airport uID="BWE">
+      <name>Braunschweig, Germany</name>
+      <positionNorth>52.319</positionNorth>
+      <positionEast>10.556</positionEast>
+      <elevation>84</elevation>
+    </airport>
+  </airports>
+  <toolspecific>
+    <mytool>
+      <mission uID="FRAtoEWR">
+        <name>Frankfurt to Newark</name>
+        <description>Test Mission</description>
+        <flightPath>
+          <waypoints mapType="vector">EDDF;ESUPI;MASIR;RAVKI;DITAM;ABAXA;BIBOS;DISMO;NAPSI;SPY;BERGI;MIMVA;LEGRO;NALAX;REMSI;BESOP;BEL;NIBOG;ODLUM;RESNO;OYSTR;STEAM;ALB;ACOVE;TALCO;WEETS;HELON;FLOSI;CRANK;SHAFF;SAX;PATRN;TEB;GIMEE;AYRON;KEWR</waypoints>
+          <latitude mapType="vector">50.033306;50.058444;50.254914;50.361664;50.558111;50.764689;50.948833;51.409444;51.855164;52.540281;52.748750;53.100892;53.326389;53.483333;53.960278;54.546667;54.661144;55.000000;55.000000;55.000000;53.866667;52.998383;42.747281;42.234783;42.062769;41.857519;41.667422;41.543528;41.416608;41.289706;41.067511;40.941222;40.848736;40.813131;40.765139;40.692500</latitude>
+          <longitude mapType="vector">8.570456;8.121097;7.737928;7.664903;7.529561;7.385881;7.208667;6.751667;6.021292;4.853781;4.358931;3.303508;1.512778;0.401667;-3.825556;-5.446111;-6.229906;-10.000000;-12.000000;-15.000000;-54.966667;-57.341528;-73.803183;-74.031831;-74.107736;-74.197661;-74.280422;-74.334097;-74.388869;-74.443406;-74.538322;-74.150922;-74.062250;-74.087903;-74.121306;-74.168667</longitude>
+        </flightPath>
+      </mission>
+    </mytool>
+  </toolspecific>
+</cpacs>

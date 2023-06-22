@@ -25,6 +25,13 @@ def preprocessing():
     except Exception as e:
         print(e)
 
+    # Register and read toolspecific data
+    px = "tb"
+    tixi_h.registerNamespace("http://www.cpacs.de/toolB",px)
+
+    base_xPath = f"/cpacs/toolspecific/tool[name='ToolB']/{px}:toolB/"
+    toolSettings["writeLogEntry"] = tixi_h.getBooleanElement(base_xPath+f"{px}:settings/{px}:writeLogEntry")
+
 
 
 def compute():
@@ -34,10 +41,8 @@ def compute():
 
 def postprocessing():
 
-    writeLogEntry = True
-
     # Add provenance information
-    if writeLogEntry:
+    if toolSettings["writeLogEntry"]:
 
         # Current version of the dataset:
         version = tixi_h.getTextElement("/cpacs/header/version")
@@ -50,7 +55,7 @@ def postprocessing():
 
         tixi_h.addTextElement(logEntry_xPath, "description", "Added log for testing")
         tixi_h.addTextElement(logEntry_xPath, "timestamp", timestamp)
-        tixi_h.addTextElement(logEntry_xPath, "creator", "ToolA")
+        tixi_h.addTextElement(logEntry_xPath, "creator", "ToolB")
 
     # Write CPACS file
     cpacsOut = os.path.join(os.getcwd(), 'cpacsIO', 'CPACS_out.xml')
@@ -60,7 +65,12 @@ def postprocessing():
 
 def main():
 
-    print('========= Welcome to ToolA =========')
+    print('========= Welcome to ToolB =========')
+
+    global toolSettings
+    toolSettings = {
+        "writeLogEntry": None,
+    }
 
     preprocessing()
     compute()

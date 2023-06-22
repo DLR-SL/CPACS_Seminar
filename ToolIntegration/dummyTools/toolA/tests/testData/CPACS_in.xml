@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-       xsi:noNamespaceSchemaLocation="C:\Workspace\Projektarbeit\ImpactMonitoring\schema\schema\cpacs_schema.xsd"
-       xsi:schemaLocation="http://www.cpacs.de/toolA C:\Workspace\Projektarbeit\ImpactMonitoring\dummyToolIntegration\toolA\toolspecific\toolspecific_toolA.xsd
-	   					   http://www.cpacs.de/toolB C:\Workspace\Projektarbeit\ImpactMonitoring\dummyToolIntegration\toolB\toolspecific\toolspecific_toolB.xsd">
+       xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/DLR-SL/CPACS/Project_ImpactMonitoring/schema/cpacs_schema.xsd">
   <header>
     <name>CPACS tool integration demo</name>
 	<version>1.0</version>
@@ -22,24 +20,4 @@
 		</versionInfo>
 	</versionInfos>
   </header>
-  <toolspecific>
-  	<tool>
-		<name>ToolA</name>
-		<version>1.0</version>
-		<toolA xmlns="http://www.cpacs.de/toolA" schemaVersion="1.0">
-			<settings>
-				<writeLogEntry>true</writeLogEntry>
-			</settings>
-		</toolA>
-	</tool>
-	<tool>
-		<name>ToolB</name>
-		<version>1.0</version>
-		<toolB xmlns="http://www.cpacs.de/toolB" schemaVersion="1.0">
-			<settings>
-				<writeLogEntry>true</writeLogEntry>
-			</settings>
-		</toolB>
-	</tool>
-  </toolspecific>
 </cpacs>
