@@ -3,8 +3,9 @@ import datetime
 from tixi3 import tixi3wrapper
 
 
-def load_external_libs():
+def preprocessing():
 
+    # Load Tixi
     try:
         global tixi_h
         tixi_h = tixi3wrapper.Tixi3()
@@ -12,19 +13,11 @@ def load_external_libs():
     except Exception as e:
         print(f"Could not load TIXI! Error message is: {e}")
 
-
-def preprocessing():
-
-    # Load Tixi
-    load_external_libs()
-
     # Open CPACS file
-    cpacsIn = os.path.join(os.getcwd(), 'cpacsIO', 'CPACS_in.xml')
     try:
-        tixi_h.open(cpacsIn)
+        tixi_h.open('./cpacsIO/CPACS_in.xml')
     except Exception as e:
         print(e)
-
 
 
 def compute():
@@ -45,9 +38,10 @@ def postprocessing():
 
         # Create new logEntry
         tixi_h.createElement(changeLog_xPath, "logEntry")
-        logEntry_xPath = changeLog_xPath + "/logEntry[last()]"
+
         timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
+        logEntry_xPath = changeLog_xPath + "/logEntry[last()]"
         tixi_h.addTextElement(logEntry_xPath, "description", "Added log for testing")
         tixi_h.addTextElement(logEntry_xPath, "timestamp", timestamp)
         tixi_h.addTextElement(logEntry_xPath, "creator", "ToolA")
