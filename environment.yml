@@ -19,4 +19,6 @@ dependencies:
   - jupyter=1.0.0
   - jupyterlab=3.6.1
   - jupyterlab_widgets=1.1.1
+  - jupyter-dash
   - notebook=6.5.2
+  - plotly
