@@ -27,7 +27,7 @@
 			<in:wingParameters>
 				<in:span>3.0</in:span>
 				<in:rootChord>1.0</in:rootChord>
-				<in:taperRatio>3</in:taperRatio>
+				<in:taperRatio>0.1</in:taperRatio>
 				<in:sweep>20.</in:sweep>
 				<in:dihedral>5.</in:dihedral>
 			</in:wingParameters>

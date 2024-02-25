@@ -166,9 +166,7 @@ def preprocessing():
 
 def compute():
 
-    print(wingParameters["taperRatio"])
-    wingParameters["tipChord"] = wingParameters["rootChord"] / \
-        wingParameters["taperRatio"]
+    wingParameters["tipChord"] = wingParameters["rootChord"] * wingParameters["taperRatio"]
 
     wingParameters["profile"] = {
         "x": [1.0, 0.99572, 0.98296, 0.96194, 0.93301, 0.89668, 0.85355, 0.80438, 0.75, 0.69134, 0.62941, 0.56526, 0.5, 0.43474, 0.37059, 0.33928, 0.30866, 0.27886, 0.25, 0.22221, 0.19562, 0.17033, 0.14645, 0.12408, 0.10332, 0.08427, 0.06699, 0.05156, 0.03806, 0.02653, 0.01704, 0.00961, 0.00428, 0.00107,

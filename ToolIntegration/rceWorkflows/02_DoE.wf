@@ -1,7 +1,7 @@
 {
   "identifier" : "52d62627-53c9-4bb7-8b49-f1ffd87989f2",
   "workflowVersion" : "5",
-  "name" : "workflow_demo_2023-05-31_22:00:39_15",
+  "name" : "workflow_demo_2024-02-25_18:34:18_25",
   "nodes" : [ {
     "identifier" : "fff40386-f696-4cbc-a6b8-338129398b3c",
     "name" : "DoE",
@@ -81,11 +81,11 @@
     },
     "dynamicOutputs" : [ {
       "identifier" : "dcb336f6-9592-4315-a417-c2f3efc82f6e",
-      "name" : "wf_input",
+      "name" : "WF_in",
       "epIdentifier" : "default",
       "datatype" : "FileReference",
       "metadata" : {
-        "startValue" : "CPACS_dummies/workflowInput/wf_input.xml"
+        "startValue" : "CPACS_demo/workflowInput/wf_input.xml"
       }
     } ]
   }, {
@@ -102,19 +102,19 @@
     "configuration" : {
       "OWWritePath" : "${targetRootFolder}",
       "OverwriteFilesAndDirs" : "false",
-      "SelectRootOnWorkflowStart" : "false",
-      "SelectedRoot" : "${dir:workspace}/CPACS_dummies",
+      "SelectRootOnWorkflowStart" : "true",
+      "SelectedRoot" : "${dir:workspace}/CPACS_demo",
       "outputLocations" : "{}",
       "storeComponentHistoryData" : "true"
     },
     "dynamicInputs" : [ {
       "identifier" : "7ce03abc-4b48-4f8b-b713-28bbb1e45546",
-      "name" : "output",
+      "name" : "WF_out",
       "epIdentifier" : "default",
       "group" : "write",
       "datatype" : "FileReference",
       "metadata" : {
-        "filename" : "output_[Timestamp]",
+        "filename" : "doe_result_[Timestamp]",
         "folderForSaving" : "[root]\\results",
         "inputExecutionConstraint_4aae3eea" : "Required",
         "inputHandling_73b1056e" : "Queue"
