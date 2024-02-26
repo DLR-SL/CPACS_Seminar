@@ -1,7 +1,7 @@
 {
   "identifier" : "52d62627-53c9-4bb7-8b49-f1ffd87989f2",
   "workflowVersion" : "5",
-  "name" : "workflow_demo_2024-02-25_18:34:18_25",
+  "name" : "workflow_demo_2024-02-26_09:33:29_05",
   "nodes" : [ {
     "identifier" : "fff40386-f696-4cbc-a6b8-338129398b3c",
     "name" : "DoE",
@@ -22,7 +22,7 @@
       "maxRerunBeforeDiscard-NAV_5e0ed1cd" : "1",
       "maxRerunBeforeFail-NAV_5e0ed1cd" : "1",
       "method" : "Latin hypercube design",
-      "runNumber" : "15",
+      "runNumber" : "10",
       "seedNumber" : "0",
       "startSample" : "0",
       "storeComponentHistoryData" : "true",
@@ -61,8 +61,8 @@
       "epIdentifier" : "default",
       "datatype" : "Float",
       "metadata" : {
-        "lower" : "1",
-        "upper" : "5"
+        "lower" : "0.1",
+        "upper" : "1"
       }
     } ]
   }, {
@@ -175,7 +175,7 @@
       "metadata" : {
         "inputExecutionConstraint_4aae3eea" : "RequiredIfConnected",
         "inputHandling_73b1056e" : "Queue",
-        "variable.xpath" : "/cpacs/toolspecific/tool/in:initializer/in:wingParameters/in:span"
+        "variable.xpath" : "/cpacs/toolspecific/tool/in:wingInitializer/in:wingParameters/in:span"
       }
     }, {
       "identifier" : "4da4f9b6-2cdd-4520-822d-38d4eb28c3a1",
@@ -185,7 +185,7 @@
       "metadata" : {
         "inputExecutionConstraint_4aae3eea" : "Required",
         "inputHandling_73b1056e" : "Queue",
-        "variable.xpath" : "/cpacs/toolspecific/tool/in:initializer/in:wingParameters/in:sweep"
+        "variable.xpath" : "/cpacs/toolspecific/tool/in:wingInitializer/in:wingParameters/in:sweep"
       }
     }, {
       "identifier" : "46868e49-f6fd-4917-b957-032c3fff044e",
@@ -195,7 +195,7 @@
       "metadata" : {
         "inputExecutionConstraint_4aae3eea" : "Required",
         "inputHandling_73b1056e" : "Queue",
-        "variable.xpath" : "/cpacs/toolspecific/tool/in:initializer/in:wingParameters/in:taperRatio"
+        "variable.xpath" : "/cpacs/toolspecific/tool/in:wingInitializer/in:wingParameters/in:taperRatio"
       }
     } ],
     "staticOutputs" : [ {
