@@ -1,0 +1,17 @@
+<cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns="http://www.cpacs.de/schema/"
+       xsi:schemaLocation="http://www.cpacs.de/schema/ cpacs_schema.xsd">
+
+    <header>
+        <name>Test</name>
+        <version>1.0</version>
+        <versionInfos>
+            <versionInfo version="1.0">
+                <creator>M.A.</creator>
+                <cpacsVersion>3.5</cpacsVersion>
+                <description>Testing the usage of a CPACS namespace</description>
+                <timestamp>2024-03-11T20:17:00</timestamp>
+            </versionInfo>
+        </versionInfos>
+    </header>
+</cpacs>
