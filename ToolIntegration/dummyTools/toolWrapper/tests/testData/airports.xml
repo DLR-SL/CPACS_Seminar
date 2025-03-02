@@ -2,19 +2,19 @@
 <cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:noNamespaceSchemaLocation="https://www.cpacs.de/schema/v3_5_0/cpacs_schema.xsd">
     <header>
-        <name>Flight Path Example</name>
+        <name>Airports Example</name>
         <version>1.0</version>
         <versionInfos>
             <versionInfo version="1.0">
                 <cpacsVersion>3.5</cpacsVersion>
-                <description>Flight Path from Frankfurt to Newark</description>
-                <timestamp>2023-04-27T12:00:00</timestamp>
-                <creator>Arthur Zamfir, DLR-SL</creator>
+                <description>CPACS file with some minimalistic airport data</description>
+                <timestamp>2025-03-27T12:00:00</timestamp>
+                <creator>CPACS Team</creator>
                 <changeLog>
                     <logEntry>
                         <description>Created initial file</description>
                         <timestamp>2023-04-27T12:00:00</timestamp>
-                        <creator>Arthur Zamfir, DLR-SL</creator>
+                        <creator>CPACS Team</creator>
                     </logEntry>
                 </changeLog>
             </versionInfo>
