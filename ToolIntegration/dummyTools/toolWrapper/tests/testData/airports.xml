@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpacs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="https://www.cpacs.de/schema/v3_5_0/cpacs_schema.xsd">
+    <header>
+        <name>Flight Path Example</name>
+        <version>1.0</version>
+        <versionInfos>
+            <versionInfo version="1.0">
+                <cpacsVersion>3.5</cpacsVersion>
+                <description>Flight Path from Frankfurt to Newark</description>
+                <timestamp>2023-04-27T12:00:00</timestamp>
+                <creator>Arthur Zamfir, DLR-SL</creator>
+                <changeLog>
+                    <logEntry>
+                        <description>Created initial file</description>
+                        <timestamp>2023-04-27T12:00:00</timestamp>
+                        <creator>Arthur Zamfir, DLR-SL</creator>
+                    </logEntry>
+                </changeLog>
+            </versionInfo>
+        </versionInfos>
+    </header>
+    <vehicles>
+        <aircraft>
+            <model uID="MyAircraft">
+                <name>Basic Aircraft</name>
+                <description>Basic Aircraft model used for exercises</description>
+            </model>
+        </aircraft>
+    </vehicles>
+    <airports>
+        <airport uID="FRA">
+            <name>Frankfurt Main International Airport, Germany</name>
+            <positionNorth>50.034444</positionNorth>
+            <positionEast>8.571389</positionEast>
+            <elevation>111</elevation>
+        </airport>
+        <airport uID="EWR">
+            <name>Newark Liberty International Airport , New York, United States</name>
+            <positionNorth>40.6925</positionNorth>
+            <positionEast>-74.168611</positionEast>
+            <elevation>5</elevation>
+        </airport>
+    </airports>
+</cpacs>
