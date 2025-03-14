@@ -3,7 +3,6 @@ import datetime
 import argparse
 from tixi3.tixi3wrapper import Tixi3
 from tigl3.tigl3wrapper import Tigl3
-import tigl3.configuration
 
 from myTool.myTool import MyDummyTool
 
@@ -178,7 +177,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    processor = ToolWrapper(
+    tool = ToolWrapper(
         cpacs_input=args.cpacs_input, cpacs_output=args.cpacs_output
     )
-    processor.run()
+    tool.run()
