@@ -151,7 +151,7 @@ class ToolWrapper:
                 self.tixi.createElement("/".join(elements[:i]), clean_elem)
 
     def run(self):
-        print("========= Structures =========")
+        print("========= Example Tool =========")
         self.preprocessing()
         self.compute()
         self.postprocessing()
